@@ -31,6 +31,8 @@ Se incluye autenticación básica con usuarios en memoria:
 - `GET /api/reports/invested-assets/export?format=excel|pdf`
 
 
+
 ## Troubleshooting
 
 Si Maven muestra `Non-parseable POM` con `=======`, revisa la guía en `docs/TROUBLESHOOTING.md`.
+=======
