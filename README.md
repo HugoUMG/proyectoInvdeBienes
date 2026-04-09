@@ -35,4 +35,3 @@ Se incluye autenticación básica con usuarios en memoria:
 ## Troubleshooting
 
 Si Maven muestra `Non-parseable POM` con `=======`, revisa la guía en `docs/TROUBLESHOOTING.md`.
-=======
