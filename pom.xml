@@ -25,6 +25,21 @@
         <zxing.version>3.5.2</zxing.version>
         <itextpdf.version>5.5.13.3</itextpdf.version>
         <lombok.version>1.18.32</lombok.version>
+        <version>3.3.5</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.proyectoinvdebienes</groupId>
+    <artifactId>backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>backend</name>
+    <description>Sistema de Gestión de Activos y Bienes Empresariales</description>
+
+    <description>Backend básico con Spring Boot y Maven</description>
+
+
+    <properties>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -112,6 +127,12 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -145,6 +166,8 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+        <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

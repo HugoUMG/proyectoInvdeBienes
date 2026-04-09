@@ -7,11 +7,8 @@ Si aparece un texto como `=======` en el error (por ejemplo en línea 19), el `p
 Marcadores típicos:
 
 ```text
-<<<<<<< HEAD
 ...
-=======
 ...
->>>>>>> branch
 ```
 
 ### Cómo corregirlo
@@ -63,3 +60,6 @@ mvn test
 ### Nota sobre warnings de `sun.misc.Unsafe`
 
 Los warnings mostrados al iniciar Maven (relacionados con Guice/Unsafe) **no son la causa del fallo del POM**. El problema real es de sintaxis XML.
+### Nota sobre warnings de `sun.misc.Unsafe`
+
+Los warnings mostrados al iniciar Maven (relacionados con Guice/Unsafe) **no son la causa del fallo del POM**. El problema real es de sintaxis XML por conflicto no resuelto.
