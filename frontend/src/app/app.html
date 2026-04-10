@@ -1,0 +1,32 @@
+<div class="layout">
+  <header>
+    <h1>Sistema de Gestión de Activos</h1>
+    <p>Frontend Angular para backend Java Maven</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="auth-panel" *ngIf="!auth.isLoggedIn(); else loggedUser">
+      <input formControlName="username" placeholder="usuario" />
+      <input formControlName="password" placeholder="contraseña" type="password" />
+      <button type="submit">Conectar</button>
+    </form>
+
+    <ng-template #loggedUser>
+      <div class="session">
+        <span>Sesión: {{ auth.username() }}</span>
+        <button type="button" (click)="auth.logout()">Cerrar sesión</button>
+      </div>
+    </ng-template>
+  </header>
+
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+    <a routerLink="/adquisiciones" routerLinkActive="active">Adquisiciones</a>
+    <a routerLink="/inventario" routerLinkActive="active">Inventario</a>
+    <a routerLink="/asignaciones" routerLinkActive="active">Asignaciones</a>
+    <a routerLink="/bajas" routerLinkActive="active">Bajas</a>
+    <a routerLink="/reportes" routerLinkActive="active">Reportes</a>
+  </nav>
+
+  <main>
+    <router-outlet />
+  </main>
+</div>
