@@ -1,37 +1,41 @@
-# Backend - Sistema de Gestión de Activos y Bienes Empresariales
+# Sistema de Gestión de Activos y Bienes Empresariales
 
-## Módulos incluidos
+Proyecto con backend Spring Boot + frontend Angular para gestionar el ciclo completo de activos.
 
-- **Adquisiciones**: registro de facturas con proveedor y partida presupuestaria.
-- **Inventario central**: alta de activos con trazabilidad por factura y etiquetado QR/RFID.
-- **Asignaciones y resguardos**: préstamos, devoluciones e historial por empleado.
-- **Bajas y enajenación**: solicitud y aprobación jerárquica de bajas.
-- **Reportes**: resumen de bienes invertidos, reportes por empleado y exportación básica.
+## Backend
 
-## Seguridad
+Módulos disponibles:
+- Adquisiciones
+- Inventario
+- Asignaciones/Resguardos
+- Bajas y Enajenación
+- Reportes
 
-Se incluye autenticación básica con usuarios en memoria:
+### Credenciales admin (explícitas)
+- **Usuario:** `admin`
+- **Contraseña:** `admin123`
 
-- `admin / admin123`
-- `compras / compras123`
-- `inventario / inventario123`
-- `finanzas / finanzas123`
+## Frontend (Angular)
 
-## Endpoints principales
+Flujo de pantallas:
+1. Login (`/login`)
+2. Menú general (`/menu`)
+3. Módulos en rutas separadas y apertura en pestañas nuevas:
+   - `/adquisiciones`
+   - `/inventario`
+   - `/asignaciones`
+   - `/bajas`
+   - `/reportes`
 
-- `POST /api/acquisitions/invoices`
-- `POST /api/inventory/assets`
-- `GET /api/inventory/assets`
-- `POST /api/assignments`
-- `POST /api/assignments/{assignmentId}/return`
-- `POST /api/disposals`
-- `POST /api/disposals/{id}/approve`
-- `GET /api/reports/invested-assets/summary`
-- `GET /api/reports/employee/{employeeId}`
-- `GET /api/reports/invested-assets/export?format=excel|pdf`
+## Ejecución rápida frontend
 
+```bash
+cd frontend
+npm install
+npm start
+```
 
+## Base de datos MySQL / phpMyAdmin
 
-## Troubleshooting
-
-Si Maven muestra `Non-parseable POM` con `=======`, revisa la guía en `docs/TROUBLESHOOTING.md`.
+Revisar documentación completa en:
+- `docs/BDD_MYSQL_PHPMYADMIN.md`
