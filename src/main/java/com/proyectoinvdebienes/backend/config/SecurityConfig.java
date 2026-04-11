@@ -21,6 +21,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/admin/**").hasRole("ADMINISTRADOR")
                         .requestMatchers("/api/reports/**").hasAnyRole("ADMINISTRADOR", "FINANZAS")
                         .requestMatchers("/api/acquisitions/**").hasAnyRole("ADMINISTRADOR", "COMPRAS")
+                        .requestMatchers("/api/data/**").hasAnyRole("ADMINISTRADOR", "COMPRAS", "INVENTARIO")
                         .requestMatchers("/api/inventory/**").hasAnyRole("ADMINISTRADOR", "INVENTARIO")
                         .requestMatchers("/api/assignments/**").hasAnyRole("ADMINISTRADOR", "INVENTARIO")
                         .requestMatchers("/api/disposals/**").hasAnyRole("ADMINISTRADOR", "INVENTARIO")
